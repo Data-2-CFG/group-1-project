@@ -13,8 +13,8 @@ def load_dataset(dataset_name):
     if dataset_name == "Creditcard Fraud Detection":
         
         #Importing train and test dataset
-        transactions_train_df = pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/fraudTrain.csv", parse_dates=["trans_date_trans_time"])
-        transactions_test_df = pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/fraudTest.csv", parse_dates=["trans_date_trans_time"])
+        transactions_train_df = pd.read_csv(TRANSACTIONS-TRAIN-PATH, parse_dates=["trans_date_trans_time"])
+        transactions_test_df = pd.read_csv(TRANSACTIONS-TEST-PATH, parse_dates=["trans_date_trans_time"])
         
         #Appending both datasets
         df = transactions_train_df.append(transactions_test_df, ignore_index=True)
