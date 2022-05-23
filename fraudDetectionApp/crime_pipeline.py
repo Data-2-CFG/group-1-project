@@ -10,8 +10,8 @@ from config import*
 
 def load_crime_data():
     
-    US_Population=pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/US_total_population.csv", parse_dates=['DATE'])
-    CCATM_Fraud_df= pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/CCATMFraudCrimeRate1991-2020.csv")
+    US_Population=pd.read_csv(US_POPULATION-PATH, parse_dates=['DATE'])
+    CCATM_Fraud_df= pd.read_csv(CCATM_FRAUD-PATH)
     
     return US_Population, CCATM_Fraud_df
     
