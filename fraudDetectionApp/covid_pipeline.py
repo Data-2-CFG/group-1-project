@@ -8,8 +8,8 @@ from config import *
 from preprocessing_pipeline import *
 
 def load_covid_data():
-    covid2020_data = pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/COVID19API_2019-01-01_2020-12-31.csv")
-    covid2021_data = pd.read_csv('C:/Users/intern7/Documents/fraudDetectionApp/data/COVID19API_2021-01-01_2021-12-31.csv')
+    covid2020_data = pd.read_csv(COVID-2020-PATH)
+    covid2021_data = pd.read_csv(COVID-2021-PATH)
 
     return covid2020_data, covid2021_data
 
@@ -91,8 +91,8 @@ def covid_pipeline(covid2020_data, covid2021_data):
     USACovid2021Monthly.reset_index(inplace=True)
     
     
-    transactions_train_df = pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/fraudTrain.csv", parse_dates=["trans_date_trans_time"])
-    transactions_test_df = pd.read_csv("C:/Users/intern7/Documents/fraudDetectionApp/data/fraudTest.csv", parse_dates=["trans_date_trans_time"])
+    transactions_train_df = pd.read_csv(TRANSACTIONS-TRAIN-PATH, parse_dates=["trans_date_trans_time"])
+    transactions_test_df = pd.read_csv(TRANSACTIONS-TEST-PATH, parse_dates=["trans_date_trans_time"])
     
     #Appending both datasets
     transactions_df = transactions_train_df.append(transactions_test_df, ignore_index=True)
